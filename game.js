@@ -1,6 +1,8 @@
 let balance = 0;
+let attempts = 0;
 
 function submit(){
+    attempts += 1;
     let user_input = document.getElementById("user_input");
     user_input = user_input.value
     let random_list = generateRandomList();
@@ -14,7 +16,8 @@ function submit(){
     }
     
     document.getElementById("generatedList").innerText = random_list;
-    document.getElementById("balance").innerText = balance;
+    document.getElementById("balance").innerText = "Your Balance is : "+balance;
+    document.getElementById("attempts").innerHTML = "Your attemts are : "+attempts;
 
     
     
