@@ -2,9 +2,13 @@ let balance = 0;
 let attempts = 0;
 
 function submit(){
-    attempts += 1;
     let user_input = document.getElementById("user_input");
     user_input = user_input.value
+    if(user_input<0 && user_input>100){
+        document.getElementById("error").innerText="Please enter the number between 1 to 100";
+        return;
+    }
+    attempts += 1;
     let random_list = generateRandomList();
     if(checkNum(user_input,random_list)){
         document.getElementById("result").innerText="Congrats, You win...."
