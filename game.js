@@ -15,7 +15,7 @@ function submit(){
         balance -= 5;
     }
     
-    document.getElementById("generatedList").innerText = random_list;
+    document.getElementById("generatedList").innerText = "The generated numbers are : " +random_list;
     document.getElementById("balance").innerText = "Your Balance is : "+balance;
     document.getElementById("attempts").innerHTML = "Your attemts are : "+attempts;
 
