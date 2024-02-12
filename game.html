@@ -4,29 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
+    <div class="container">
 
-    <marquee><h1>Online Game</h1></marquee>
+        <marquee><h1>Online Game</h1></marquee>
 
-    <div class="forms" id="user_input_box">
-        <input type="number" id="user_input">
-        <input type="submit" onclick="submit()">
+        <div class="forms" id="user_input_box">
+            <input type="number" id="user_input">
+
+            <input type="submit" onclick="submit()">
+        </div>
+
+
+        <div class="container">
+            <h1 id="error"></h1>
+            <h1 id="attempts"></h1>
+            <h1 id="balance"></h1>
+            <h1 id="generatedList"></h1>
+            <h1 id="result"></h1>
+
+            <h3><u>Rate Card</u></h3>
+            <p>
+                Correct Answer : +10<br/>
+                Wrong Answer : -5
+            </p>
+        </div>
+        
+
     </div>
 
 
-    <h1 id="error"></h1>
-    <h1 id="attempts"></h1>
-    <h1 id="balance"></h1>
-    <h1 id="generatedList"></h1>
-    <h1 id="result"></h1>
-
-    <h3><u>Rate Card</u></h3>
-    <p>
-        Correct Answer : +10<br/>
-        Wrong Answer : -5
-    </p>
+    
 
     <script src="game.js"></script>
     <link rel="stylesheet" href="game.css">
