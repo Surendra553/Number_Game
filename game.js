@@ -5,6 +5,10 @@ function submit(){
     let user_input = document.getElementById("user_input");
     user_input = user_input.value
     console.log(user_input)
+    if(user_input === null){
+        document.getElementById("error").innerText="Enter any value";
+        return;
+    }
     if(user_input < 0 && user_input > 100){
         document.getElementById("error").innerText="Please enter the number between 1 to 100";
         return;
@@ -13,7 +17,7 @@ function submit(){
         let random_list = generateRandomList();
         if(checkNum(user_input,random_list)){
             document.getElementById("result").innerText="Congrats, You win...."
-            balance += 10;
+            balance += 20;
         }
         else{
             document.getElementById("result").innerText="Sorry, You lost...."
